@@ -78,10 +78,9 @@ getgenv().Username = "BEESUCALL"
                 ["Fennec fox"] = { priority = 4, emoji = "🦊", isMutation = false },
                 ["Butterfly"] = { priority = 5, emoji = "🦋", isMutation = false },
                 ["Dragonfly"] = { priority = 6, emoji = "🐲", isMutation = false },
-                ["Mimic Octopus"] = { priority = 7, emoji = "🐙", isMutation = false },
-                ["Corrupted Kitsune"] = { priority = 8, emoji = "🦊", isMutation = false },
-                ["T-Rex"] = { priority = 9, emoji = "🦖", isMutation = false },
-                ["Spinosaurus"] = { priority = 10, emoji = "🫎", isMutation = false },
+                ["Mimic Octopus"] = { priority = 7, emoji = "🐙", isMutation = false }
+                ["T-Rex"] = { priority = 8, emoji = "🦖", isMutation = false },
+                ["Spinosaurus"] = { priority = 9, emoji = "🫎", isMutation = false },
                 ["Queen Bee"] = { priority = 11, emoji = "👑", isMutation = false },
                 ["Red Fox"] = { priority = 26, emoji = "🦊", isMutation = false },
                 -- Mutations
