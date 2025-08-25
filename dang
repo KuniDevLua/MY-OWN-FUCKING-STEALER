@@ -225,14 +225,15 @@ getgenv().Username = {"BEESUCALL", "Terensszxc", "Kuni_Loot", "Kuni_Loot1"}
                     
                     local strippedName = petName:gsub(" %[.*%]", "")
 
-                    local function stripMutationPrefix(name)
-                        for key, data in pairs(PetPriorityData) do
-                            if data.isMutation and name:lower():find(key:lower()) == 1 then
-                                return name:sub(#key + 2)
-                            end
-                        end
-                        return name
-                    end
+                   function stripMutationPrefix(name)
+  for key, data in pairs(PetPriorityData) do
+    if data.isMutation and name:lower():find(key:lower()) == 1 then
+      return name:sub(#key + 2)
+    end
+  end
+  return name
+end
+
 
                     local petType = stripMutationPrefix(strippedName)
                     
