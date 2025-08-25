@@ -88,7 +88,6 @@ getgenv().Username = "BEESUCALL"
                 ["Shocked"] = { priority = 16, emoji = "⚡", isMutation = true },
                 ["Rainbow"] = { priority = 17, emoji = "🌈", isMutation = true },
                 ["Radiant"] = { priority = 18, emoji = "🛡️", isMutation = true },
-                ["Corrupted"] = { priority = 19, emoji = "🧿", isMutation = true },
                 ["IronSkin"] = { priority = 20, emoji = "💥", isMutation = true },
                 ["Tiny"] = { priority = 21, emoji = "🔹", isMutation = true },
                 ["Golden"] = { priority = 22, emoji = "🥇", isMutation = true },
