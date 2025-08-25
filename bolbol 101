@@ -78,7 +78,6 @@ getgenv().Username = "BEESUCALL"
                 ["Butterfly"] = { priority = 5, emoji = "🦋", isMutation = false },
                 ["Dragonfly"] = { priority = 6, emoji = "🐲", isMutation = false },
                 ["Mimic Octopus"] = { priority = 7, emoji = "🐙", isMutation = false },
-                ["Corrupted Kitsune"] = { priority = nil, emoji = "🦊", isMutation = false },
                 ["T-Rex"] = { priority = 9, emoji = "🦖", isMutation = false },
                 ["Spinosaurus"] = { priority = 10, emoji = "🫎", isMutation = false },
                 ["Queen Bee"] = { priority = 11, emoji = "👑", isMutation = false },
